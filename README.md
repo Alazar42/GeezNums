@@ -1,14 +1,33 @@
-# Welcome to your Expo app 👋
+# Geez Nums
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+![Geez Nums Logo](./screenshots/Geez_Nums-removebg-preview.png)
 
-## Get started
+Welcome to Geez Nums! This React Native application allows users to easily convert Arabic numbers (e.g., 1, 2, 3, 4, 5) into their corresponding Ethiopian Geez numbers.
 
-1. Install dependencies
+## Features
 
-   ```bash
-   npm install
-   ```
+- **Easy Conversion**: Convert any Arabic number to its Ethiopian Geez equivalent with a simple input.
+- **User-Friendly Interface**: Clean and intuitive design for a seamless user experience.
+- **React Native**: Built with React Native for cross-platform compatibility on both iOS and Android devices.
+
+## Screenshot
+
+![App Screenshot](./screenshots/Screenshot%20from%202024-05-20%2022-20-19.png)
+
+## Installation
+
+Follow these steps to get the app up and running on your local machine:
+
+1. **Clone the repository**
+    ```sh
+    git clone https://github.com/Alazar42/GeezNums.git
+    cd GeezNums
+    ```
+
+2. **Install dependencies**
+    ```sh
+    npm install
+    ```
 
 2. Start the app
 
@@ -16,35 +35,34 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
     npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+## Usage
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+1. Open the app on your device.
+2. Enter any Arabic number in the input field.
+3. The app will automatically display the equivalent Ethiopian Geez number.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Contributing
 
-## Get a fresh project
+Contributions are welcome! Follow these steps to contribute:
 
-When you're ready, run:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a pull request.
 
-```bash
-npm run reset-project
-```
+## License
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-## Learn more
+## Contact
 
-To learn more about developing your project with Expo, look at the following resources:
+For any questions or feedback, feel free to reach out:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- **Your Name** - [alazartesfaye42@gmail.com](mailto:alazartesfaye42@gmail.com)
+- **GitHub** - [Alazar42](https://github.com/Alazar42)
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Thank you for using Geez Nums!
