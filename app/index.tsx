@@ -4,11 +4,18 @@ import { StyleSheet, View, Text, Image } from "react-native";
 import MaterialUnderlineTextbox from "../components/MaterialUnderlineTextbox";
 import MaterialButtonShare from "../components/MaterialButtonShare";
 import Icon from "react-native-vector-icons/Entypo";
+import { useState } from 'react';
 
 const LoginPage = () => {
+  const Geezify = require("geezify-js") // For Node only
+  let geez = Geezify.create();
+  const [inputNumber, setInputNumber] = useState('');
+  const [resultNumber, setResultNumber] = useState('');
   return (
     <View style={styles.container}>
       <MaterialUnderlineTextbox
+        textValue={inputNumber}
+        setTextValue={setInputNumber}
         inputStyle="Enter A Number ..."
         style={styles.materialUnderlineTextbox}
       ></MaterialUnderlineTextbox>
@@ -16,14 +23,47 @@ const LoginPage = () => {
         iconName="share-variant"
         icon="arrow-down"
         style={styles.materialButtonShare}
+        press={() => {
+          if (inputNumber === '' || inputNumber.startsWith('0')) {
+            setResultNumber('0');
+            styles.loremIpsum = {
+              color: "rgba(29,61,195,1)",
+              height: 226,
+              width: 375,
+              textAlign: "center",
+              fontSize: 60,
+              marginTop: 22
+            }
+        } else if (/[^0-9]/.test(inputNumber)) {
+          styles.loremIpsum ={
+            color: "red",
+            height: 226,
+            width: 375,
+            textAlign: "center",
+            fontSize: 25,
+            marginTop: 22
+          }
+          setResultNumber("Error: Can't Convert String To Number!");
+        } else {
+          setResultNumber(geez.toGeez(inputNumber));
+          styles.loremIpsum = {
+            color: "rgba(29,61,195,1)",
+            height: 226,
+            width: 375,
+            textAlign: "center",
+            fontSize: 60,
+            marginTop: 22
+          }
+        }
+        }}
       ></MaterialButtonShare>
-      <Text style={styles.loremIpsum}></Text>
+      <Text style={styles.loremIpsum} >{resultNumber}</Text>
       <Image
-        source={require("../assets/images/Geez_Nums-removebg-preview.png")}
+        source={require("@/assets/images/Geez_Nums-removebg-preview.png")}
         resizeMode="contain"
         style={styles.image}
       ></Image>
-      <Icon name="dots-three-vertical" style={styles.icon}></Icon>
+      <Icon onPress={() => { setResultNumber('') }} name="cross" style={styles.icon}></Icon>
     </View>
   );
 }
@@ -45,7 +85,6 @@ const styles = StyleSheet.create({
     marginLeft: 151
   },
   loremIpsum: {
-    fontFamily: "roboto-700",
     color: "rgba(29,61,195,1)",
     height: 226,
     width: 375,
@@ -60,10 +99,11 @@ const styles = StyleSheet.create({
     marginLeft: 88
   },
   icon: {
-    color: "rgba(128,128,128,1)",
+    color: "rgba(25,87,194,1)",
     fontSize: 40,
-    marginTop: -260,
-    marginLeft: 288
+    marginTop: 200,
+    marginLeft: 320
   }
 });
+
 export default LoginPage

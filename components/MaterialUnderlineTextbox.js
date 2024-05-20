@@ -5,6 +5,10 @@ function MaterialUnderlineTextbox(props) {
   return (
     <View style={[styles.container, props.style]}>
       <TextInput
+        keyboardType="numeric"
+        numberOfLines={1}
+        value={props.textValue}
+        onChangeText={props.setTextValue}
         placeholder={props.inputStyle || "Placeholder"}
         style={styles.inputStyle}
       ></TextInput>
