@@ -1,6 +1,8 @@
 # Geez Nums
 
-![Geez Nums Logo](./screenshots/Geez_Nums-removebg-preview.png)
+<p align="center">
+  <img src="./screenshots/Geez_Nums-removebg-preview.png" alt="Geez Nums Logo"/>
+</p>
 
 Welcome to Geez Nums! This React Native application allows users to easily convert Arabic numbers (e.g., 1, 2, 3, 4, 5) into their corresponding Ethiopian Geez numbers.
 
