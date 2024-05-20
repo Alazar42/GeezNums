@@ -60,7 +60,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any questions or feedback, feel free to reach out:
 
-- **Your Name** - [alazartesfaye42@gmail.com](mailto:alazartesfaye42@gmail.com)
+- **Alazar Tesfaye** - [alazartesfaye42@gmail.com](mailto:alazartesfaye42@gmail.com)
 - **GitHub** - [Alazar42](https://github.com/Alazar42)
 
 ---
